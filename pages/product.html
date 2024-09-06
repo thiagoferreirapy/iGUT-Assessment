@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iGUT Cadastros | Produtos</title>
+    <link rel="stylesheet" href="../styles/product.css">
+</head>
+
+<body onload="loadProducts()">
+    <header>
+        <a href="../index.html">
+            <img src="../images/logo-darck.svg" class="image-logo-dark" alt="Imagem da logo da empresa iGUT Cadastro">
+        </a>
+        <nav>
+            <a href="../index.html" id="page-home">Início</a>
+            <a href="product.html" id="page-product">Produtos</a>
+        </nav>
+    </header>
+    <main>
+        <section class="container-product">
+            <div class="content-title-products">
+                <h1>Aqui você encontra todos os produtos <br> cadastrados em nosso sistema.</h1>
+                <button type="reset" class="button-register-products" onclick="openRegisterModal()">Cadastrar
+                    Produto</button>
+            </div>
+            <b>
+                <div class="content-search-product">
+                    <p class="text-coutn-product" >Exibindo <span id="countProduct"></span> produtos</p>
+                    <label for="" class="label-search-product">
+                        <div class="autocomplete-container">
+                            <input type="text" id="autocomplete-input" class="input-search-product"
+                                placeholder="Buscar produto...">
+                            <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
+                        </div>
+                    </label>
+
+                </div>
+                <div id="alert-container"></div>
+        </section>
+        <section class="container-table-product">
+            <table id="produtos" class="table-product">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section class="container-register-modal" id="registerModal" style="display: none;">
+            <div class="register-modal">
+                <button onclick="closeRegisterModal()" class="button-close-modal">X</button>
+                <form action="" method="post" id="productForm">
+                    <p><span>Cadastro / Novo Produto</span></p>
+                    <h2>Novo Produto</h2>
+                    <label for="name">
+                        <p>Nome</p>
+                        <input type="text" id="name" name="name" placeholder="Ex: Notebook Lenovo"
+                            class="input-register-product">
+                    </label>
+                    <label for="price">
+                        <p>Valor do produto</p>
+                        <input type="number" id="price" name="price" placeholder="0,00" class="input-register-product">
+                    </label>
+
+                    <div class="content-buttons-modal">
+                        <button type="submit" class="button-post-register">Salvar produto</button>
+                        <button type="reset" class="button-cancel-register"
+                            onclick="closeRegisterModal()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../scripts/js/listProducts.js"></script>
+
+</html>

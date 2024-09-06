@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    padding: 0 150px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0 4px;
+    color: #0D6793;
+    cursor: pointer;
+}
+
+nav #page-home{
+    position: relative;
+}
+
+nav #page-product {
+    position: relative;
+    color: #0D6793;
+}
+
+nav #page-product::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #0D6793;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+nav #page-product:hover::after {
+    width: 100%; 
+}
+
+
+nav #page-home::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0D6793;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.image-logo-dark{
+    width: 150px;
+    object-fit: cover;
+}
+
+
+main{
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+}
+
+main .container-slogan{
+    width: 470px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    h1{
+        font-family: "Poppins";
+        font-size: 40px;
+        font-weight: 400;
+        color: #66777F;
+        line-height: 50px;
+        border-bottom: 30px;
+
+        strong{
+            color: #0D6793;
+        };
+    };
+
+    p{
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 400;
+        color: #66777F;
+        margin-top: 50px;
+    }
+}
+
+.button-register-products{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0D6793;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+main .conatiner-mocups-sise{
+    width: 820px;
+    height: 100%;
+    background-image: url(../images/bg-mocups.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+@media (max-width: 1300px) {
+    main{
+        padding: 0 70px;
+    }
+    .content-title-products{
+        flex-direction: column;
+    }
+    .container-product h1{
+        text-align: left;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 1100px) {
+    main .conatiner-mocups-sise{
+        width: 500px;
+        height: 100%;
+        background-image: url(../images/bg-mocups.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    main .container-slogan{
+        h1{
+            line-height: 40px;
+        };
+    }
+}
+
+@media (max-width: 900px) {
+
+    main{
+        width: 100%;
+        height: 1000px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .conatiner-mocups-sise{
+        width: 100%;
+        background-image: url(../images/bg-mocups.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    main .container-slogan{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    
+        h1{
+            text-align: center;
+        };
+    
+        p{
+            text-align: center;
+        }
+    }
+    
+}
+@media (max-width: 800px) {
+    header {
+        padding: 0 70px;
+    }
+    main{
+        padding: 30px 20px 20px 20px;
+    }
+    main .conatiner-mocups-sise{
+        width: 100%;
+        background-image: url(../images/bg-mocups.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    main .container-slogan{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        h1{
+            text-align: center;
+        };
+    
+        p{
+            text-align: center;
+        }
+    }
+    
+}
+@media (max-width: 700px) {
+    header {
+        padding: 0 20px;
+    }
+    main .container-slogan{
+        h1{
+            text-align: center;
+            line-height: 50px
+        };
+    
+        p{
+            text-align: center;
+        }
+    }
+    
+}

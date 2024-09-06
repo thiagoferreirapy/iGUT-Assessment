@@ -46,6 +46,15 @@ Na aba Importar, selecione o arquivo cadastro_produtos.sql.
 Clique em Executar.
 Isso irá criar a tabela de produtos com os campos id, name e price.
 
+### ⚠️ Atenção:
+1. No arquivo connection.php é necessário alterar as credenciais para conectar com o seu banco de dados:
+   ```bash
+    $host: O endereço do servidor onde seu banco de dados MySQL está hospedado (geralmente localhost).
+    $dbname: O nome do banco de dados que você deseja acessar.
+    $user: O nome de usuário com acesso ao banco de dados.
+    $password: A senha desse usuário.
+
+
 ## Uso
 Acesse a página principal da aplicação no navegador:
 http://localhost/Assessment/pages/product.html
